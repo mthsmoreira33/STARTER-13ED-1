@@ -1,0 +1,31 @@
+:root {
+   --color-primary-growdev: #E16E0E;
+   --color-secondary-growdev: #2B385B;
+   --width-float-button: 3rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.float-button {
+    width: var(--width-float-button);
+    height: 3rem;
+    right: 1.5rem;
+    bottom: 1.5rem;
+    background-color: var(--color-primary-growdev);
+    border-color: var(--color-primary-growdev);
+}
+
+.float-button:hover {
+    background-color: var(--color-secondary-growdev);
+    border-color: var(--color-secondary-growdev);
+}
+
+body {
+    height: 300vh;
+}
+
+
+
