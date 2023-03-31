@@ -1,4 +1,4 @@
-import { criarProduto } from './features/products';
+import { atualizaProduto, criarProduto, deletaProduto } from './features/products';
 import { Produto } from './types';
 import listaProdutos from './database';
 
@@ -41,5 +41,9 @@ const mouse: Produto = {
 criarProduto(teclado);
 criarProduto(mouse);
 criarProduto(monitor);
+
+atualizaProduto({ produto: { nome: 'Headset Gamer' }, id: '123' });
+deletaProduto(monitor.id);
+
 
 console.log(listaProdutos);

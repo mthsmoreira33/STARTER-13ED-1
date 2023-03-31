@@ -35,6 +35,8 @@ interface Produto {
 	genero: Genero;
 }
 
+
+
 export { Categoria, Genero, Produto, Tag };
 
 // // partial
