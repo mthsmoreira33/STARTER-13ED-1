@@ -1,4 +1,4 @@
-import { atualizaProduto, criarProduto, deletaProduto, listarProdutos, listarProdutosPorCategoria } from './features/products';
+import { atualizaProduto, criarProduto, deletaProduto, listarProdutos, listarProdutosPorCategoria, listarProdutosPorFaixaDePreco } from './features/products';
 import { Produto } from './types';
 import listaProdutos from './database';
 
@@ -46,3 +46,4 @@ atualizaProduto({ produto: { nome: 'Headset Gamer' }, id: '123' })
 deletaProduto(monitor.id);
 console.log(listarProdutos());
 console.log(listarProdutosPorCategoria({nome: 'Periféricos'}));
+console.log(listarProdutosPorFaixaDePreco(70, 190))
