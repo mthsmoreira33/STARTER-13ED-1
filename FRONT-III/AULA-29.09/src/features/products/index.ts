@@ -5,5 +5,6 @@ import listarProdutos from './list-product';
 import listarProdutosPorCategoria from './list.product-by-cat';
 import listarProdutosPorFaixaDePreco from './list-product-min-max';
 import listarProdutosPorTag from './list-product-by-tag';
+import adicionaTag from './add-tag';
 
-export { criarProduto, atualizaProduto, deletaProduto, listarProdutos, listarProdutosPorCategoria, listarProdutosPorFaixaDePreco, listarProdutosPorTag };
+export { criarProduto, atualizaProduto, deletaProduto, listarProdutos, listarProdutosPorCategoria, listarProdutosPorFaixaDePreco, listarProdutosPorTag, adicionaTag };

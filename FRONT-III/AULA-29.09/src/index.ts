@@ -1,4 +1,4 @@
-import { atualizaProduto, criarProduto, deletaProduto, listarProdutos, listarProdutosPorCategoria, listarProdutosPorFaixaDePreco, listarProdutosPorTag } from './features/products';
+import { adicionaTag, atualizaProduto, criarProduto, deletaProduto, listarProdutos, listarProdutosPorCategoria, listarProdutosPorFaixaDePreco, listarProdutosPorTag } from './features/products';
 import { Produto } from './types';
 import listaProdutos from './database';
 
@@ -48,3 +48,5 @@ console.log(listarProdutos());
 console.log(listarProdutosPorCategoria({nome: 'Periféricos'}));
 console.log(listarProdutosPorFaixaDePreco(70, 190));
 console.log(listarProdutosPorTag('BLACKFRIDAY'));
+console.log(adicionaTag('123',['USADOS']))
+console.log(mouse.categoria.tags)
