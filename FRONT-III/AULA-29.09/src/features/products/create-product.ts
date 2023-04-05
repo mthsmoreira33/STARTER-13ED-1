@@ -7,7 +7,7 @@ function criarProduto(produto: Produto) {
 	);
 
 	if (nomeEncontrado) {
-		return console.log('O nome do produto enviado já está cadastrado.');
+		return 'O nome do produto enviado já está cadastrado.';
 	}
 
 	listaProdutos.push(produto);

@@ -3,14 +3,19 @@ import listaProdutos from "../../database";
 
 function listarProdutosPorCategoria(categoria: Partial<Categoria>){
     const produtosFiltrados: Produto[] = listaProdutos.filter(
-        (produto) => produto.categoria.nome === categoria
+        produto => produto.categoria.nome === categoria.nome
       );
+    let lista = "";
 
-      produtosFiltrados.forEach((produto) => {
-        return `\n Nome: ${produto.nome} \n Quantidade: ${produto.quantidade}`;
-      });
+      if(produtosFiltrados.length === 0) {
+        return `Não foi possível achar produtos da categoria ${categoria.nome}`;
+      }
 
-      return `Não foi possível achar produtos da categoria ${categoria}`;
+      for (const produto of produtosFiltrados) {
+        lista += `\n Nome: ${produto.nome} \n Quantidade em Estoque: ${produto.quantidade}\n`;
+      }
+
+      return lista;
 }
 
 export default listarProdutosPorCategoria;

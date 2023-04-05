@@ -1,4 +1,4 @@
-import { atualizaProduto, criarProduto, deletaProduto, listarProdutos } from './features/products';
+import { atualizaProduto, criarProduto, deletaProduto, listarProdutos, listarProdutosPorCategoria } from './features/products';
 import { Produto } from './types';
 import listaProdutos from './database';
 
@@ -42,6 +42,7 @@ criarProduto(teclado);
 criarProduto(mouse);
 criarProduto(monitor);
 
-atualizaProduto({ produto: { nome: 'Headset Gamer' }, id: '123' });
+atualizaProduto({ produto: { nome: 'Headset Gamer' }, id: '123' })
 deletaProduto(monitor.id);
-listarProdutos();
+console.log(listarProdutos());
+console.log(listarProdutosPorCategoria({nome: 'Periféricos'}));
