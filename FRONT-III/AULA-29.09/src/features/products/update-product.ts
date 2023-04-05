@@ -1,7 +1,7 @@
 import { Categoria, Produto } from '../../types';
 import listaProdutos from '../../database';
 
-function atualizaProduto({ produto, id }: { produto: Partial<Produto>; id: string; }): Partial<Produto> {
+function atualizaProduto({ produto, id }: { produto: Produto; id: string; }): Produto {
     if (listaProdutos) {
         const index = listaProdutos.findIndex(produto => produto.id === id);
 

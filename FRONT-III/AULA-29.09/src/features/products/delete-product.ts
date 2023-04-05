@@ -4,7 +4,7 @@ import listaProdutos from '../../database';
 function deletaProduto(id: string) {
     const index = listaProdutos.findIndex(produto => produto.id === id);
     if (!id || index === -1) {
-        return console.log('\n ERRO: ID inválido \n');
+        return 'ERRO: ID inválido';
     }
 
     listaProdutos.splice(index, 1);
